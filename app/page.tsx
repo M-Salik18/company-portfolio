@@ -3,9 +3,8 @@
 import { useState } from "react";
 
 const BRAND = {
-  name: "BYTECRAFT",
-  tagline: "Digital Studio",
-  email: "nexora@gmail.com",
+  name: "XYRON",
+  email: "xyron@gmail.com",
   whatsapp: "94763896746", // Replace with your WhatsApp number in international format
 };
 
@@ -25,26 +24,35 @@ const projects = [
     ],
     style: "routex",
     symbol: "R.",
+    image: "/Images/RouteX/login.png",
+    href: "/projects/routex",
+    exploreText: "Explore RouteX",
   },
   {
     number: "02",
-    title: "Brew & Co. — Café",
-    category: "Business Website · Concept Project",
+    title: "Moda — Clothing Brand",
+    category: "E-Commerce · Fashion Brand Website",
     description:
-      "A welcoming café website concept featuring a menu, location information, opening hours, and customer inquiries.",
-    tags: ["React", "Responsive UI", "Web Design"],
-    style: "cafe",
-    symbol: "B.",
+      "A modern fashion and e-commerce web platform featuring curated seasonal collections, seamless cart experience, and brand storytelling.",
+    tags: ["Next.js", "E-Commerce", "UI/UX Design", "Tailwind CSS"],
+    style: "clothing",
+    symbol: "M.",
+    image: "/Images/Clothing/clothing.png",
+    href: "/projects/clothing",
+    exploreText: "Explore Clothing Software",
   },
   {
     number: "03",
-    title: "Stockly — Business Dashboard",
-    category: "Custom Software · Concept Project",
+    title: "DineFlow — Restaurant System",
+    category: "Custom Software · Restaurant Platform",
     description:
-      "A sample inventory and sales dashboard designed to help small businesses organize products and monitor operations.",
-    tags: ["TypeScript", "Dashboard UI", "Database"],
-    style: "dashboard",
-    symbol: "S.",
+      "An intuitive restaurant management platform featuring digital menu ordering, table reservations, live kitchen workflows, and analytics.",
+    tags: ["React", "Custom Software", "Table Booking", "POS & Ordering"],
+    style: "restaurant",
+    symbol: "D.",
+    image: "/Images/Restuarant/restuarant.png",
+    href: "/projects/restaurant",
+    exploreText: "Explore Restaurant Software",
   },
 ];
 
@@ -86,105 +94,32 @@ const processSteps = [
   ["04", "Launch & support", "Go live and discuss ongoing needs."],
 ];
 
-function CafePreview() {
-  return (
-    <div className="bg-[#f3e7d6] p-5 text-[#433024] sm:p-8">
-      <div className="flex justify-between text-xs font-bold tracking-widest">
-        <span>BREW & CO.</span>
-        <span>MENU　VISIT US</span>
-      </div>
-
-      <div className="grid grid-cols-2 items-center gap-4 py-8">
-        <div>
-          <p className="text-xs uppercase tracking-widest">
-            Your daily pause
-          </p>
-
-          <h3 className="mt-3 text-4xl font-semibold sm:text-5xl">
-            Good
-            <br />
-            coffee.
-            <br />
-            Good days.
-          </h3>
-
-          <p className="mt-4 text-sm">Made with care.</p>
-        </div>
-
-        <div className="flex aspect-square items-center justify-center rounded-full bg-gradient-to-br from-[#bd8b5e] to-[#4a2c1c]">
-          <span className="text-6xl text-white/80">☕</span>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function StocklyPreview() {
-  return (
-    <div className="bg-[#161922] p-5 text-white sm:p-8">
-      <div className="flex justify-between text-xs text-zinc-400">
-        <span>STOCKLY / OVERVIEW</span>
-        <span>Sample preview</span>
-      </div>
-
-      <div className="mt-6 grid grid-cols-3 gap-2">
-        {["Products", "Orders", "Revenue"].map((item, i) => (
-          <div
-            key={item}
-            className="rounded-lg border border-white/10 bg-white/5 p-3"
-          >
-            <p className="text-[10px] text-zinc-400">{item}</p>
-
-            <p className="mt-2 text-xl font-semibold">
-              {["128", "46", "$8.4k"][i]}
-            </p>
-          </div>
-        ))}
-      </div>
-
-      <div className="mt-4 flex h-28 items-end gap-2 rounded-lg bg-white/5 p-4">
-        {[35, 65, 45, 85, 55, 95, 70, 100, 60, 80].map(
-          (height, i) => (
-            <div
-              key={i}
-              style={{ height: `${height}%` }}
-              className="flex-1 rounded-t bg-amber-300/80"
-            />
-          )
-        )}
-      </div>
-    </div>
-  );
-}
-
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[#101114] text-white">
+    <main className="min-h-screen bg-[#101114] text-white pt-20">
       {/* NAVIGATION */}
-      <header className="sticky top-0 z-50 border-b border-white/10 bg-[#101114]/90 backdrop-blur-xl">
+      <header className="fixed top-0 left-0 right-0 z-50 w-full border-b border-white/10 bg-[#101114]/90 backdrop-blur-xl">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 md:px-10">
           <a href="#home" className="flex items-center gap-3">
-            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-400 text-xl font-black text-black">
-              B
-            </span>
+            <img
+              src="/Images/logo.jpeg"
+              alt={`${BRAND.name} Logo`}
+              className="h-10 w-10 rounded-xl object-contain"
+            />
 
             <span className="text-lg font-bold tracking-[0.15em]">
               {BRAND.name}
-
-              <span className="ml-2 text-xs font-normal tracking-normal text-zinc-400">
-                {BRAND.tagline}
-              </span>
             </span>
           </a>
 
           <div className="hidden items-center gap-8 text-sm text-zinc-300 md:flex">
             <a
               className="transition hover:text-amber-300"
-              href="#work"
+              href="#products"
             >
-              Work
+              Products
             </a>
 
             <a
@@ -221,7 +156,7 @@ export default function Home() {
 
         {menuOpen && (
           <div className="flex flex-col gap-4 border-t border-white/10 px-6 py-5 md:hidden">
-            {["work", "services", "about", "contact"].map((item) => (
+            {["products", "services", "about", "contact"].map((item) => (
               <a
                 key={item}
                 href={`#${item}`}
@@ -269,10 +204,10 @@ export default function Home() {
             </a>
 
             <a
-              href="#work"
+              href="#products"
               className="rounded-full border border-white/15 px-7 py-4 font-semibold transition hover:border-amber-300"
             >
-              Explore our work ↓
+              Explore our products ↓
             </a>
           </div>
 
@@ -283,65 +218,111 @@ export default function Home() {
           </div>
         </div>
 
-        {/* ABSTRACT PROJECT PREVIEW */}
+        {/* ABSTRACT PROJECT PREVIEW - THEME MATCHED */}
         <div className="relative mx-auto w-full max-w-xl">
-          <div className="absolute -inset-6 rounded-[3rem] bg-amber-300/10 blur-3xl" />
+          <div className="absolute -inset-6 rounded-[3rem] bg-amber-400/15 blur-3xl" />
 
-          <div className="relative rotate-1 rounded-3xl border border-white/10 bg-[#1b1c21] p-3 shadow-2xl">
-            <div className="flex items-center gap-2 border-b border-white/10 px-3 py-4">
-              <span className="h-2.5 w-2.5 rounded-full bg-red-400" />
-              <span className="h-2.5 w-2.5 rounded-full bg-yellow-400" />
-              <span className="h-2.5 w-2.5 rounded-full bg-green-400" />
-
-              <span className="ml-4 text-xs text-zinc-500">
-                yourbusiness.com
-              </span>
-            </div>
-
-            <div className="overflow-hidden rounded-2xl bg-[#e9e2d6] p-6 text-[#28251f] sm:p-9">
-              <div className="flex items-center justify-between text-xs font-bold tracking-widest">
-                <span>MODA.</span>
-                <span>COLLECTION · ABOUT · SHOP</span>
+          <div className="relative rotate-1 rounded-3xl border border-amber-400/20 bg-[#15161c] p-3 shadow-[0_20px_50px_rgba(0,0,0,0.8)] backdrop-blur-xl">
+            {/* Browser top bar */}
+            <div className="flex items-center justify-between border-b border-white/10 px-4 py-3.5">
+              <div className="flex items-center gap-2">
+                <span className="h-2.5 w-2.5 rounded-full bg-red-500/80" />
+                <span className="h-2.5 w-2.5 rounded-full bg-amber-400/80" />
+                <span className="h-2.5 w-2.5 rounded-full bg-emerald-400/80" />
               </div>
 
-              <div className="grid grid-cols-2 items-center gap-4 py-10">
-                <div>
-                  <p className="text-[10px] uppercase tracking-[0.25em]">
-                    The new collection
-                  </p>
+              <div className="flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-4 py-1 text-[11px] text-zinc-400">
+                <span className="h-1.5 w-1.5 rounded-full bg-amber-400" />
+                <span>xyron.dev/platform</span>
+              </div>
 
-                  <h2 className="mt-3 text-4xl font-semibold leading-none sm:text-5xl">
-                    Wear
+              <span className="text-xs text-zinc-600">⌘K</span>
+            </div>
+
+            {/* Inner Dashboard / Showcase */}
+            <div className="overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-[#1c1e26] via-[#14151b] to-[#0f1015] p-6 sm:p-8">
+              <div className="flex items-center justify-between text-xs font-bold tracking-widest text-zinc-400">
+                <span className="flex items-center gap-2 font-extrabold tracking-wider text-white">
+                  <img
+                    src="/Images/logo.jpeg"
+                    alt="XYRON"
+                    className="h-5 w-5 rounded-md object-contain"
+                  />
+                  XYRON CORE
+                </span>
+                <span className="flex items-center gap-1.5 text-[10px] uppercase text-amber-300">
+                  <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-amber-400" />
+                  Systems Live
+                </span>
+              </div>
+
+              <div className="grid grid-cols-1 items-center gap-6 py-8 sm:grid-cols-2">
+                <div>
+                  <div className="inline-flex items-center gap-1.5 rounded-full border border-amber-400/30 bg-amber-400/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-amber-300">
+                    Next-Gen Suite
+                  </div>
+
+                  <h2 className="mt-3 text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
+                    Built for
                     <br />
-                    your
-                    <br />
-                    story.
+                    <span className="text-amber-300">impact & scale.</span>
                   </h2>
 
-                  <div className="mt-5 inline-block rounded-full bg-[#28251f] px-4 py-2 text-xs text-white">
-                    Explore collection ↗
+                  <p className="mt-2.5 text-xs leading-relaxed text-zinc-400">
+                    Custom web software, rapid workflows, and intelligent business tools.
+                  </p>
+
+                  <div className="mt-5 inline-flex items-center gap-2 rounded-full bg-amber-400 px-4 py-2 text-xs font-semibold text-black transition hover:bg-amber-300">
+                    Explore Platform ↗
                   </div>
                 </div>
 
-                <div className="flex aspect-[3/4] items-center justify-center rounded-t-full bg-gradient-to-br from-[#c9ad91] via-[#aa8063] to-[#6e5144]">
-                  <span className="text-7xl font-light text-white/80">
-                    M.
-                  </span>
+                {/* Visual Telemetry Widget */}
+                <div className="flex flex-col gap-3 rounded-2xl border border-white/10 bg-white/[0.03] p-4 shadow-lg">
+                  <div className="flex items-center justify-between text-[11px]">
+                    <span className="font-medium text-zinc-400">Performance Score</span>
+                    <span className="font-bold text-amber-300">99.8%</span>
+                  </div>
+
+                  {/* Sparkline / Bar visualization */}
+                  <div className="flex h-20 items-end gap-1.5 rounded-lg bg-black/40 p-2.5">
+                    {[40, 65, 45, 80, 55, 95, 75, 100, 68, 88].map((h, i) => (
+                      <div
+                        key={i}
+                        style={{ height: `${h}%` }}
+                        className="flex-1 rounded-sm bg-gradient-to-t from-amber-500/40 via-amber-400 to-amber-300 transition duration-300 hover:brightness-125"
+                      />
+                    ))}
+                  </div>
+
+                  <div className="flex items-center justify-between border-t border-white/5 pt-2 text-[10px] text-zinc-400">
+                    <span>Active Modules</span>
+                    <span className="font-semibold text-white">12 Connected</span>
+                  </div>
                 </div>
               </div>
 
-              <div className="flex justify-between border-t border-black/15 pt-4 text-[10px] uppercase tracking-widest">
-                <span>Designed for everyday</span>
-                <span>01 / 03</span>
+              <div className="flex justify-between border-t border-white/10 pt-4 text-[10px] uppercase tracking-widest text-zinc-500">
+                <span>Enterprise Architecture</span>
+                <span className="text-amber-300/80">01 / 03</span>
               </div>
             </div>
           </div>
 
-          <div className="absolute -bottom-7 -left-3 rounded-2xl border border-white/10 bg-[#222329] p-4 shadow-xl sm:-left-10">
-            <p className="text-xs text-zinc-400">Our focus</p>
+          {/* REDESIGNED THEME-MATCHED FLOATING BADGE */}
+          <div className="absolute -bottom-8 -left-3 rounded-2xl border border-amber-400/30 bg-[#14151b]/95 p-4 shadow-[0_16px_40px_rgba(0,0,0,0.7),0_0_25px_rgba(245,158,11,0.15)] backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-amber-400/50 sm:-left-10">
+            <div className="flex items-center gap-2">
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-400 opacity-75"></span>
+                <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-amber-400"></span>
+              </span>
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-amber-300">
+                Our focus
+              </span>
+            </div>
 
-            <p className="mt-1 font-semibold">
-              Design meets technology ✳
+            <p className="mt-1.5 flex items-center gap-2 text-sm font-semibold tracking-tight text-white sm:text-base">
+              Design meets technology <span className="text-amber-400">✦</span>
             </p>
           </div>
         </div>
@@ -363,15 +344,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WORK */}
+      {/* PRODUCTS */}
       <section
-        id="work"
+        id="products"
         className="mx-auto max-w-7xl px-5 py-24 md:px-10 md:py-32"
       >
         <div className="mb-12 flex flex-wrap items-end justify-between gap-6">
           <div>
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">
-              Selected work
+              Selected products
             </p>
 
             <h2 className="text-4xl font-semibold tracking-tight sm:text-5xl">
@@ -380,8 +361,8 @@ export default function Home() {
           </div>
 
           <p className="max-w-md leading-7 text-zinc-400">
-            A collection of concepts and projects that demonstrate how we
-            approach design, development, and business challenges.
+            A collection of projects and solutions demonstrating our expertise in
+            web platforms, tailored e-commerce, and custom business software.
           </p>
         </div>
 
@@ -395,38 +376,25 @@ export default function Home() {
               {/* PROJECT PREVIEW */}
               <div
                 className={`relative flex items-center justify-center overflow-hidden p-5 sm:p-8 ${project.style === "routex"
-                    ? "bg-[#202630]"
-                    : project.style === "cafe"
-                      ? "bg-[#d5b99c]"
-                      : "bg-[#222630]"
+                  ? "bg-[#181d26]"
+                  : project.style === "clothing"
+                    ? "bg-[#252321]"
+                    : "bg-[#1f232b]"
                   }`}
               >
                 <div
-                  className={`w-full overflow-hidden rounded-xl shadow-2xl transition duration-500 group-hover:-translate-y-1 ${index === 0 ? "max-w-5xl" : "max-w-xl"
+                  className={`w-full overflow-hidden rounded-xl border border-white/10 shadow-2xl transition duration-500 group-hover:-translate-y-1 ${index === 0 ? "max-w-5xl" : "max-w-xl"
                     }`}
                 >
-                  {/* ROUTEX PREVIEW */}
-                  {project.style === "routex" && (
-                    <img
-                      src="/Images/RouteX/dashboard.png"
-                      alt="RouteX dashboard screenshot"
-                      className="h-auto w-full object-cover"
-                    />
-                  )}
-
-                  {/* CAFE PREVIEW */}
-                  {project.style === "cafe" && <CafePreview />}
-
-                  {/* STOCKLY PREVIEW */}
-                  {project.style === "dashboard" && (
-                    <StocklyPreview />
-                  )}
+                  <img
+                    src={project.image}
+                    alt={`${project.title} preview`}
+                    className="h-auto w-full object-cover"
+                  />
                 </div>
 
-                <span className="absolute right-7 top-7 rounded-full bg-black/70 px-4 py-2 text-xs text-white">
-                  {project.style === "routex"
-                    ? "Project showcase ↗"
-                    : "Concept preview"}
+                <span className="absolute right-7 top-7 rounded-full bg-black/75 px-4 py-2 text-xs text-white backdrop-blur-md border border-white/10">
+                  Project showcase ↗
                 </span>
               </div>
 
@@ -461,25 +429,24 @@ export default function Home() {
                   ))}
                 </div>
 
-                {/* ROUTEX PAGE LINK */}
-                {project.style === "routex" && (
+                {/* PROJECT EXPLORE LINK */}
+                <div className="mt-6">
                   <a
-                    href="/projects/routex"
-                    className="mt-6 inline-flex items-center gap-2 rounded-full bg-amber-400 px-5 py-3 text-sm font-semibold text-black transition hover:-translate-y-0.5 hover:bg-amber-300"
+                    href={project.href}
+                    className="inline-flex items-center gap-2 rounded-full bg-amber-400 px-5 py-3 text-sm font-semibold text-black transition hover:-translate-y-0.5 hover:bg-amber-300"
                   >
-                    Explore RouteX
+                    {project.exploreText}
                     <span aria-hidden="true">↗</span>
                   </a>
-                )}
+                </div>
               </div>
             </article>
           ))}
         </div>
 
         <p className="mt-8 text-xs leading-6 text-zinc-500">
-          Brew & Co. and Stockly are concept projects created to demonstrate
-          our design and development approach. RouteX is a software project
-          developed as part of our project work.
+          RouteX, Moda, and DineFlow showcase our capabilities across custom web platforms,
+          e-commerce, and enterprise software solutions.
         </p>
       </section>
 
@@ -588,30 +555,31 @@ export default function Home() {
             </p>
 
             <h2 className="text-4xl font-semibold tracking-tight sm:text-5xl">
-              Two developers.
+              Engineering excellence.
               <br />
-              One shared vision.
+              Driven by purpose.
             </h2>
           </div>
 
           <div>
             <p className="text-lg leading-8 text-zinc-300">
-              We are a small development team passionate about creating
-              useful, accessible, and thoughtfully designed digital
-              experiences.
+              We are a dedicated team of software engineers, designers, and digital architects
+              passionate about creating high-performance, accessible, and thoughtfully designed
+              solutions.
             </p>
 
             <p className="mt-5 leading-7 text-zinc-400">
-              We combine software development skills with a practical
-              understanding of business needs. Our goal is to help businesses
-              establish their online presence and simplify everyday work.
+              We combine deep technical expertise with a practical understanding of business goals.
+              Our mission is to help companies scale their digital infrastructure, modernize workflows,
+              and delight customers.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
               {[
-                "Web Development",
-                "Software Engineering",
-                "Problem Solving",
+                "Web Platforms",
+                "Custom Software",
+                "Cloud Solutions",
+                "UI/UX Architecture",
               ].map((skill) => (
                 <span
                   key={skill}
@@ -676,10 +644,6 @@ export default function Home() {
             className="font-bold tracking-widest text-white"
           >
             {BRAND.name}
-
-            <span className="ml-2 font-normal tracking-normal text-zinc-500">
-              / Digital Studio
-            </span>
           </a>
 
           <p>

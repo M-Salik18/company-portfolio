@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Nexora | Digital Studio",
+  title: "XYRON | Web Platforms & Custom Software",
   description:
     "We build modern websites, custom software, and digital solutions for businesses.",
 };

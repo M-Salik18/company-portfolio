@@ -1,40 +1,41 @@
 const technologies = [
-    "Express.js",
-    "Flutter",
-    "Python",
-    "XGBoost",
-    "Cloudflare",
-    "D1",
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Stripe",
+    "Framer Motion",
+    "Vercel Edge",
 ];
 
 const features = [
     {
         number: "01",
-        title: "Route Optimization",
+        title: "Editorial Lookbooks",
         description:
-            "Plan delivery routes with an optimization service built to support logistics operations.",
+            "Showcase seasonal collections with high-impact typography, full-bleed imagery, and interactive lookbook hotspots.",
     },
     {
         number: "02",
-        title: "Vehicle Tracking",
+        title: "Seamless Cart & Checkout",
         description:
-            "Monitor vehicle locations and delivery progress through the tracking system.",
+            "Frictionless drawer cart with live subtotal calculation, instant variant switches (size, color), and secure payment integration.",
     },
     {
         number: "03",
-        title: "Inventory & Orders",
+        title: "Mobile-First Design",
         description:
-            "Manage orders and inventory information in one connected platform.",
+            "Fluid layouts tailored for smartphone shoppers, delivering swift touch interactions and lightning-fast load times.",
     },
     {
         number: "04",
-        title: "AI Forecasting",
+        title: "Brand Storytelling",
         description:
-            "Use forecasting capabilities to support stock planning and operational decisions.",
+            "Immersive content modules designed to narrate collection origins, material sustainability, and brand ethos.",
     },
 ];
 
-export default function RouteXPage() {
+export default function ClothingProjectPage() {
     return (
         <main className="min-h-screen bg-[#101114] text-white pt-20">
             {/* NAVIGATION */}
@@ -74,14 +75,14 @@ export default function RouteXPage() {
                     <div className="mt-8 grid items-end gap-10 md:grid-cols-[1.3fr_0.7fr]">
                         <div>
                             <h1 className="text-5xl font-semibold tracking-tight sm:text-7xl">
-                                RouteX
+                                Moda
                                 <span className="text-amber-300">.</span>
                             </h1>
 
                             <p className="mt-6 max-w-2xl text-xl leading-9 text-zinc-300">
-                                A logistics management platform connecting delivery
-                                operations, route optimization, tracking, inventory, and
-                                AI-powered forecasting.
+                                An editorial fashion and e-commerce platform crafted to elevate
+                                apparel brands with bespoke aesthetics, lookbooks, and high-conversion
+                                shopping experiences.
                             </p>
                         </div>
 
@@ -91,7 +92,7 @@ export default function RouteXPage() {
                             </p>
 
                             <p className="mt-2 text-lg font-semibold">
-                                Logistics Management System
+                                E-Commerce & Brand Platform
                             </p>
 
                             <div className="my-5 border-t border-white/10" />
@@ -101,23 +102,23 @@ export default function RouteXPage() {
                             </p>
 
                             <p className="mt-2 leading-7 text-zinc-300">
-                                Web dashboard · Route optimization · AI
+                                Editorial UI · Lookbooks · Online Store
                             </p>
                         </div>
                     </div>
 
-                    {/* HERO IMAGE - LOGIN PAGE ONLY */}
+                    {/* HERO IMAGE */}
                     <div className="mt-14 overflow-hidden rounded-3xl border border-white/10 bg-[#1a1c22] p-2 shadow-2xl sm:p-4">
                         <img
-                            src="/Images/RouteX/login.png"
-                            alt="RouteX Login Portal"
+                            src="/Images/Clothing/clothing.png"
+                            alt="Moda Clothing platform showcase"
                             className="h-auto w-full rounded-2xl"
                             fetchPriority="high"
                         />
                     </div>
 
                     <p className="mt-4 text-sm text-zinc-500">
-                        RouteX login portal — secure logistics management gateway
+                        Moda fashion storefront — landing and curated lookbook view
                     </p>
                 </div>
             </section>
@@ -131,22 +132,20 @@ export default function RouteXPage() {
                         </p>
 
                         <h2 className="mt-5 text-4xl font-semibold tracking-tight sm:text-5xl">
-                            Bringing logistics operations together.
+                            Where fashion meets digital craftsmanship.
                         </h2>
                     </div>
 
                     <div>
                         <p className="text-lg leading-8 text-zinc-300">
-                            RouteX is a logistics platform designed to bring important
-                            delivery and business operations into a connected system. It
-                            combines desktop management, vehicle routing, and
-                            intelligent features to support logistics workflows.
+                            Moda is designed for contemporary clothing labels seeking a premium,
+                            editorial web presence. It merges the tactile elegance of high-end
+                            fashion magazines with modern e-commerce engineering.
                         </p>
 
                         <p className="mt-5 leading-7 text-zinc-400">
-                            The platform includes tools for managing orders, planning
-                            routes, monitoring vehicles, handling inventory, and reviewing
-                            forecasts.
+                            Customers can explore seasonal drops, view styling inspirations, filter
+                            apparel by sizing and palette, and complete transactions with speed and ease.
                         </p>
                     </div>
                 </div>
@@ -160,7 +159,7 @@ export default function RouteXPage() {
                     </p>
 
                     <h2 className="mt-5 max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
-                        Designed around real workflows.
+                        Features built for modern apparel brands.
                     </h2>
 
                     <div className="mt-12 grid gap-4 sm:grid-cols-2">
@@ -196,12 +195,12 @@ export default function RouteXPage() {
                             </p>
 
                             <h2 className="mt-5 text-4xl font-semibold tracking-tight sm:text-5xl">
-                                Built with modern tools.
+                                Built for speed and scale.
                             </h2>
 
                             <p className="mt-5 leading-7 text-zinc-400">
-                                Technologies used across the platform&apos;s web,
-                                backend, and machine-learning components.
+                                Leveraged high-performance frontend frameworks, edge hosting, and modern
+                                checkout pipelines to guarantee sub-second page loads.
                             </p>
                         </div>
 
@@ -228,29 +227,28 @@ export default function RouteXPage() {
                         </p>
 
                         <h2 className="mt-5 text-4xl font-semibold tracking-tight sm:text-5xl">
-                            One connected logistics experience.
+                            Elevating the apparel retail journey.
                         </h2>
                     </div>
 
                     <div>
                         <p className="text-lg leading-8 text-zinc-300">
-                            RouteX brings together key elements of enterprise delivery
-                            operations into an intuitive, secure interface.
+                            The Moda clothing software platform provides apparel businesses with the tools
+                            needed to create captivating visual brand identities while driving online sales.
                         </p>
 
                         <p className="mt-5 leading-7 text-zinc-400">
-                            Route optimization, live tracking, inventory coordination,
-                            and AI-driven forecasting empower operations teams to deliver
-                            faster with higher efficiency and accuracy.
+                            From seamless mobile navigation to fast checkout flows, every touchpoint is
+                            engineered to convert visitors into loyal customers.
                         </p>
 
                         <div className="mt-8 flex flex-wrap gap-3">
                             {[
-                                "Web Dashboard",
-                                "Route Optimization",
-                                "Live Tracking",
-                                "AI Forecasting",
-                                "Inventory Management",
+                                "Lookbook Showcase",
+                                "E-Commerce Storefront",
+                                "Variant Selector",
+                                "Mobile Optimization",
+                                "Fast Checkout",
                             ].map((item) => (
                                 <span
                                     key={item}
@@ -274,12 +272,11 @@ export default function RouteXPage() {
                     </p>
 
                     <h2 className="relative mt-5 max-w-3xl text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
-                        Have a project in mind?
+                        Have a clothing or retail brand in mind?
                     </h2>
 
                     <p className="relative mt-5 max-w-xl leading-7 text-black/70">
-                        Let&apos;s discuss how we can help bring your next digital
-                        project to life.
+                        Let&apos;s build an unforgettable digital store and brand identity for your business.
                     </p>
 
                     <div className="relative mt-8 flex flex-wrap gap-4">

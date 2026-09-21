@@ -1,40 +1,41 @@
 const technologies = [
-    "Express.js",
-    "Flutter",
-    "Python",
-    "XGBoost",
-    "Cloudflare",
-    "D1",
+    "React",
+    "Node.js",
+    "Express",
+    "PostgreSQL",
+    "WebSocket",
+    "Tailwind CSS",
+    "Redis",
 ];
 
 const features = [
     {
         number: "01",
-        title: "Route Optimization",
+        title: "Interactive Digital Menu",
         description:
-            "Plan delivery routes with an optimization service built to support logistics operations.",
+            "Rich visual dish catalogs featuring dietary filters, customization add-ons, pricing options, and chef specials.",
     },
     {
         number: "02",
-        title: "Vehicle Tracking",
+        title: "Table Reservation Engine",
         description:
-            "Monitor vehicle locations and delivery progress through the tracking system.",
+            "Seamless online table booking with floorplan mapping, automated confirmations, and party capacity management.",
     },
     {
         number: "03",
-        title: "Inventory & Orders",
+        title: "Live Kitchen Display (KDS)",
         description:
-            "Manage orders and inventory information in one connected platform.",
+            "Real-time WebSocket ticket routing directly to kitchen prep stations with color-coded preparation timers.",
     },
     {
         number: "04",
-        title: "AI Forecasting",
+        title: "Sales & Dining Analytics",
         description:
-            "Use forecasting capabilities to support stock planning and operational decisions.",
+            "Operational insights tracking peak dining hours, customer retention, top-performing menu items, and revenue trends.",
     },
 ];
 
-export default function RouteXPage() {
+export default function RestaurantProjectPage() {
     return (
         <main className="min-h-screen bg-[#101114] text-white pt-20">
             {/* NAVIGATION */}
@@ -74,14 +75,13 @@ export default function RouteXPage() {
                     <div className="mt-8 grid items-end gap-10 md:grid-cols-[1.3fr_0.7fr]">
                         <div>
                             <h1 className="text-5xl font-semibold tracking-tight sm:text-7xl">
-                                RouteX
+                                DineFlow
                                 <span className="text-amber-300">.</span>
                             </h1>
 
                             <p className="mt-6 max-w-2xl text-xl leading-9 text-zinc-300">
-                                A logistics management platform connecting delivery
-                                operations, route optimization, tracking, inventory, and
-                                AI-powered forecasting.
+                                An all-in-one restaurant management platform connecting online
+                                menu ordering, table reservations, live kitchen workflows, and analytics.
                             </p>
                         </div>
 
@@ -91,7 +91,7 @@ export default function RouteXPage() {
                             </p>
 
                             <p className="mt-2 text-lg font-semibold">
-                                Logistics Management System
+                                Restaurant Management & Ordering System
                             </p>
 
                             <div className="my-5 border-t border-white/10" />
@@ -101,23 +101,23 @@ export default function RouteXPage() {
                             </p>
 
                             <p className="mt-2 leading-7 text-zinc-300">
-                                Web dashboard · Route optimization · AI
+                                Digital Menus · Table Bookings · Kitchen Display
                             </p>
                         </div>
                     </div>
 
-                    {/* HERO IMAGE - LOGIN PAGE ONLY */}
+                    {/* HERO IMAGE */}
                     <div className="mt-14 overflow-hidden rounded-3xl border border-white/10 bg-[#1a1c22] p-2 shadow-2xl sm:p-4">
                         <img
-                            src="/Images/RouteX/login.png"
-                            alt="RouteX Login Portal"
+                            src="/Images/Restuarant/restuarant.png"
+                            alt="DineFlow Restaurant platform interface"
                             className="h-auto w-full rounded-2xl"
                             fetchPriority="high"
                         />
                     </div>
 
                     <p className="mt-4 text-sm text-zinc-500">
-                        RouteX login portal — secure logistics management gateway
+                        DineFlow restaurant management — customer ordering & table reservation portal
                     </p>
                 </div>
             </section>
@@ -131,22 +131,20 @@ export default function RouteXPage() {
                         </p>
 
                         <h2 className="mt-5 text-4xl font-semibold tracking-tight sm:text-5xl">
-                            Bringing logistics operations together.
+                            Modernizing hospitality operations.
                         </h2>
                     </div>
 
                     <div>
                         <p className="text-lg leading-8 text-zinc-300">
-                            RouteX is a logistics platform designed to bring important
-                            delivery and business operations into a connected system. It
-                            combines desktop management, vehicle routing, and
-                            intelligent features to support logistics workflows.
+                            DineFlow provides hospitality businesses with a complete digital ecosystem.
+                            From contactless mobile menu ordering to intelligent table seating and
+                            kitchen communication, it simplifies hospitality workflows.
                         </p>
 
                         <p className="mt-5 leading-7 text-zinc-400">
-                            The platform includes tools for managing orders, planning
-                            routes, monitoring vehicles, handling inventory, and reviewing
-                            forecasts.
+                            Whether managing dine-in guests or online takeaway requests, DineFlow ensures
+                            synchronization between front-of-house staff, kitchen teams, and diners.
                         </p>
                     </div>
                 </div>
@@ -160,7 +158,7 @@ export default function RouteXPage() {
                     </p>
 
                     <h2 className="mt-5 max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
-                        Designed around real workflows.
+                        Built for fast-paced culinary workflows.
                     </h2>
 
                     <div className="mt-12 grid gap-4 sm:grid-cols-2">
@@ -196,12 +194,12 @@ export default function RouteXPage() {
                             </p>
 
                             <h2 className="mt-5 text-4xl font-semibold tracking-tight sm:text-5xl">
-                                Built with modern tools.
+                                Robust real-time architecture.
                             </h2>
 
                             <p className="mt-5 leading-7 text-zinc-400">
-                                Technologies used across the platform&apos;s web,
-                                backend, and machine-learning components.
+                                Built with low-latency WebSocket communication, robust databases,
+                                and reliable state management to keep dining tickets perfectly synced.
                             </p>
                         </div>
 
@@ -228,29 +226,28 @@ export default function RouteXPage() {
                         </p>
 
                         <h2 className="mt-5 text-4xl font-semibold tracking-tight sm:text-5xl">
-                            One connected logistics experience.
+                            A complete restaurant management solution.
                         </h2>
                     </div>
 
                     <div>
                         <p className="text-lg leading-8 text-zinc-300">
-                            RouteX brings together key elements of enterprise delivery
-                            operations into an intuitive, secure interface.
+                            DineFlow equips restaurants with an intuitive system that reduces wait times,
+                            prevents order errors, and gives management actionable revenue insights.
                         </p>
 
                         <p className="mt-5 leading-7 text-zinc-400">
-                            Route optimization, live tracking, inventory coordination,
-                            and AI-driven forecasting empower operations teams to deliver
-                            faster with higher efficiency and accuracy.
+                            From local bistros to multi-chain dining establishments, DineFlow provides
+                            the scale and reliability hospitality teams need every day.
                         </p>
 
                         <div className="mt-8 flex flex-wrap gap-3">
                             {[
-                                "Web Dashboard",
-                                "Route Optimization",
-                                "Live Tracking",
-                                "AI Forecasting",
-                                "Inventory Management",
+                                "Digital Menu Ordering",
+                                "Table Booking",
+                                "Kitchen Display System",
+                                "Real-Time WebSocket Sync",
+                                "Revenue Analytics",
                             ].map((item) => (
                                 <span
                                     key={item}
@@ -274,12 +271,11 @@ export default function RouteXPage() {
                     </p>
 
                     <h2 className="relative mt-5 max-w-3xl text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
-                        Have a project in mind?
+                        Need custom software for your business?
                     </h2>
 
                     <p className="relative mt-5 max-w-xl leading-7 text-black/70">
-                        Let&apos;s discuss how we can help bring your next digital
-                        project to life.
+                        Let&apos;s build an efficient, intuitive software system tailored to your unique workflows.
                     </p>
 
                     <div className="relative mt-8 flex flex-wrap gap-4">
