@@ -4,8 +4,8 @@ import { useState } from "react";
 
 const BRAND = {
   name: "XYRON",
-  email: "xyron@gmail.com",
-  whatsapp: "94763896746", // Replace with your WhatsApp number in international format
+  email: "xyron.comp@gmail.com",
+  whatsapp: "94781942757", // Replace with your WhatsApp number in international format
 };
 
 const projects = [
