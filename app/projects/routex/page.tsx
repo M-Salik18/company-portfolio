@@ -56,7 +56,7 @@ export default function RouteXPage() {
                         href="/#products"
                         className="rounded-full border border-white/15 px-5 py-3 text-sm font-medium transition hover:border-amber-300 hover:text-amber-300"
                     >
-                        ← All products
+                        All products
                     </a>
                 </nav>
             </header>
@@ -287,7 +287,7 @@ export default function RouteXPage() {
                             href="/#contact"
                             className="rounded-full bg-[#171717] px-7 py-4 font-semibold text-white transition hover:bg-black/80"
                         >
-                            Start a project ↗
+                            Start a project
                         </a>
 
                         <a
@@ -318,7 +318,7 @@ export default function RouteXPage() {
                         href="/#home"
                         className="transition hover:text-amber-300"
                     >
-                        Back to top ↑
+                        Back to top
                     </a>
                 </div>
             </footer>

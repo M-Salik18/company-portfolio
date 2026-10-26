@@ -59,31 +59,59 @@ const projects = [
 const services = [
   {
     number: "01",
-    title: "Business Websites",
+    title: "Web design & development",
     description:
-      "Professional, responsive websites that introduce your business and help customers find you online.",
-    icon: "↗",
+      "Business sites, e-commerce, portals and multilingual builds.",
+    icon: "◈",
   },
   {
     number: "02",
-    title: "E-commerce",
+    title: "Software & apps",
     description:
-      "Online stores with product catalogs, shopping experiences, and convenient customer ordering.",
-    icon: "◇",
-  },
-  {
-    number: "03",
-    title: "Custom Software",
-    description:
-      "Business dashboards, management systems, and tools built around your workflow.",
+      "Custom business software, SaaS, mobile apps and PWAs.",
     icon: "⌘",
   },
   {
-    number: "04",
-    title: "Mobile & AI Solutions",
+    number: "03",
+    title: "AI & automation",
     description:
-      "Mobile applications and intelligent features for practical business needs.",
-    icon: "✳",
+      "Chatbots, document search, lead capture and workflow automation.",
+    icon: "⌥",
+  },
+  {
+    number: "04",
+    title: "Cybersecurity",
+    description:
+      "Vulnerability assessments, hardening and SIEM deployment, within written scope.",
+    icon: "⌁",
+  },
+  {
+    number: "05",
+    title: "Cloud & DevOps",
+    description:
+      "VPS, CI/CD, Docker, backups, uptime monitoring and deployment.",
+    icon: "◇",
+  },
+  {
+    number: "06",
+    title: "IT support",
+    description:
+      "Remote support, Microsoft 365, Google Workspace and small-office networks.",
+    icon: "◎",
+  },
+  {
+    number: "07",
+    title: "UI/UX & branding",
+    description:
+      "Brand identity, wireframes, prototypes and design systems.",
+    icon: "✦",
+  },
+  {
+    number: "08",
+    title: "Data, IoT & Integrations",
+    description:
+      "Dashboards, APIs, sensors, Raspberry Pi and system integrations.",
+    icon: "◬",
   },
 ];
 
@@ -140,7 +168,7 @@ export default function Home() {
               className="rounded-full bg-amber-400 px-5 py-3 font-semibold text-black transition hover:bg-amber-300"
               href="#contact"
             >
-              Let&apos;s talk ↗
+              Let&apos;s talk
             </a>
           </div>
 
@@ -173,24 +201,24 @@ export default function Home() {
       {/* HERO */}
       <section
         id="home"
-        className="relative mx-auto grid max-w-7xl items-center gap-14 px-5 py-24 md:grid-cols-2 md:px-10 md:py-36"
+        className="relative mx-auto max-w-7xl px-5 py-24 md:px-10 md:py-36"
       >
         <div className="pointer-events-none absolute -left-48 top-20 h-96 w-96 rounded-full bg-amber-500/10 blur-[120px]" />
 
-        <div className="relative z-10">
+        <div className="relative z-10 max-w-4xl">
           <div className="mb-7 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.25em] text-amber-300">
             <span className="h-px w-8 bg-amber-300" />
             Web · Software · Digital
           </div>
 
-          <h1 className="max-w-3xl text-5xl font-semibold leading-[1.08] tracking-tight sm:text-6xl lg:text-7xl">
+          <h1 className="text-5xl font-semibold leading-[1.08] tracking-tight sm:text-6xl lg:text-7xl">
             We build digital experiences that{" "}
             <span className="text-amber-300">
               move businesses forward.
             </span>
           </h1>
 
-          <p className="mt-7 max-w-xl text-lg leading-8 text-zinc-400">
+          <p className="mt-7 max-w-2xl text-lg leading-8 text-zinc-400">
             From beautiful websites to custom software, we help businesses
             turn ideas into practical digital solutions.
           </p>
@@ -200,130 +228,21 @@ export default function Home() {
               href="#contact"
               className="rounded-full bg-amber-400 px-7 py-4 font-semibold text-black transition hover:-translate-y-1 hover:bg-amber-300"
             >
-              Start a project ↗
+              Start a project
             </a>
 
             <a
               href="#products"
               className="rounded-full border border-white/15 px-7 py-4 font-semibold transition hover:border-amber-300"
             >
-              Explore our products ↓
+              Explore our products
             </a>
           </div>
 
           <div className="mt-12 flex flex-wrap gap-x-7 gap-y-3 text-sm text-zinc-500">
-            <span>✳ Thoughtful design</span>
-            <span>✳ Practical solutions</span>
-            <span>✳ Built for people</span>
-          </div>
-        </div>
-
-        {/* ABSTRACT PROJECT PREVIEW - THEME MATCHED */}
-        <div className="relative mx-auto w-full max-w-xl">
-          <div className="absolute -inset-6 rounded-[3rem] bg-amber-400/15 blur-3xl" />
-
-          <div className="relative rotate-1 rounded-3xl border border-amber-400/20 bg-[#15161c] p-3 shadow-[0_20px_50px_rgba(0,0,0,0.8)] backdrop-blur-xl">
-            {/* Browser top bar */}
-            <div className="flex items-center justify-between border-b border-white/10 px-4 py-3.5">
-              <div className="flex items-center gap-2">
-                <span className="h-2.5 w-2.5 rounded-full bg-red-500/80" />
-                <span className="h-2.5 w-2.5 rounded-full bg-amber-400/80" />
-                <span className="h-2.5 w-2.5 rounded-full bg-emerald-400/80" />
-              </div>
-
-              <div className="flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-4 py-1 text-[11px] text-zinc-400">
-                <span className="h-1.5 w-1.5 rounded-full bg-amber-400" />
-                <span>xyron.dev/platform</span>
-              </div>
-
-              <span className="text-xs text-zinc-600">⌘K</span>
-            </div>
-
-            {/* Inner Dashboard / Showcase */}
-            <div className="overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-[#1c1e26] via-[#14151b] to-[#0f1015] p-6 sm:p-8">
-              <div className="flex items-center justify-between text-xs font-bold tracking-widest text-zinc-400">
-                <span className="flex items-center gap-2 font-extrabold tracking-wider text-white">
-                  <img
-                    src="/Images/logo.jpeg"
-                    alt="XYRON"
-                    className="h-5 w-5 rounded-md object-contain"
-                  />
-                  XYRON CORE
-                </span>
-                <span className="flex items-center gap-1.5 text-[10px] uppercase text-amber-300">
-                  <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-amber-400" />
-                  Systems Live
-                </span>
-              </div>
-
-              <div className="grid grid-cols-1 items-center gap-6 py-8 sm:grid-cols-2">
-                <div>
-                  <div className="inline-flex items-center gap-1.5 rounded-full border border-amber-400/30 bg-amber-400/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-amber-300">
-                    Next-Gen Suite
-                  </div>
-
-                  <h2 className="mt-3 text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
-                    Built for
-                    <br />
-                    <span className="text-amber-300">impact & scale.</span>
-                  </h2>
-
-                  <p className="mt-2.5 text-xs leading-relaxed text-zinc-400">
-                    Custom web software, rapid workflows, and intelligent business tools.
-                  </p>
-
-                  <div className="mt-5 inline-flex items-center gap-2 rounded-full bg-amber-400 px-4 py-2 text-xs font-semibold text-black transition hover:bg-amber-300">
-                    Explore Platform ↗
-                  </div>
-                </div>
-
-                {/* Visual Telemetry Widget */}
-                <div className="flex flex-col gap-3 rounded-2xl border border-white/10 bg-white/[0.03] p-4 shadow-lg">
-                  <div className="flex items-center justify-between text-[11px]">
-                    <span className="font-medium text-zinc-400">Performance Score</span>
-                    <span className="font-bold text-amber-300">99.8%</span>
-                  </div>
-
-                  {/* Sparkline / Bar visualization */}
-                  <div className="flex h-20 items-end gap-1.5 rounded-lg bg-black/40 p-2.5">
-                    {[40, 65, 45, 80, 55, 95, 75, 100, 68, 88].map((h, i) => (
-                      <div
-                        key={i}
-                        style={{ height: `${h}%` }}
-                        className="flex-1 rounded-sm bg-gradient-to-t from-amber-500/40 via-amber-400 to-amber-300 transition duration-300 hover:brightness-125"
-                      />
-                    ))}
-                  </div>
-
-                  <div className="flex items-center justify-between border-t border-white/5 pt-2 text-[10px] text-zinc-400">
-                    <span>Active Modules</span>
-                    <span className="font-semibold text-white">12 Connected</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex justify-between border-t border-white/10 pt-4 text-[10px] uppercase tracking-widest text-zinc-500">
-                <span>Enterprise Architecture</span>
-                <span className="text-amber-300/80">01 / 03</span>
-              </div>
-            </div>
-          </div>
-
-          {/* REDESIGNED THEME-MATCHED FLOATING BADGE */}
-          <div className="absolute -bottom-8 -left-3 rounded-2xl border border-amber-400/30 bg-[#14151b]/95 p-4 shadow-[0_16px_40px_rgba(0,0,0,0.7),0_0_25px_rgba(245,158,11,0.15)] backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-amber-400/50 sm:-left-10">
-            <div className="flex items-center gap-2">
-              <span className="relative flex h-2.5 w-2.5">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-400 opacity-75"></span>
-                <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-amber-400"></span>
-              </span>
-              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-amber-300">
-                Our focus
-              </span>
-            </div>
-
-            <p className="mt-1.5 flex items-center gap-2 text-sm font-semibold tracking-tight text-white sm:text-base">
-              Design meets technology <span className="text-amber-400">✦</span>
-            </p>
+            <span>Thoughtful design</span>
+            <span>Practical solutions</span>
+            <span>Built for people</span>
           </div>
         </div>
       </section>
@@ -332,14 +251,8 @@ export default function Home() {
       <section className="border-y border-white/10 bg-white/[0.02]">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-12 gap-y-4 px-5 py-7 text-center text-sm text-zinc-400 md:px-10">
           <span>WEBSITE DEVELOPMENT</span>
-          <span className="text-amber-300">✳</span>
-
           <span>BUSINESS SOFTWARE</span>
-          <span className="text-amber-300">✳</span>
-
           <span>DIGITAL EXPERIENCES</span>
-          <span className="text-amber-300">✳</span>
-
           <span>CREATIVE TECHNOLOGY</span>
         </div>
       </section>
@@ -370,21 +283,24 @@ export default function Home() {
           {projects.map((project, index) => (
             <article
               key={project.number}
-              className={`group overflow-hidden rounded-3xl border border-white/10 bg-[#191a1f] ${index === 0 ? "md:col-span-2" : ""
-                }`}
+              className={`group overflow-hidden rounded-3xl border border-white/10 bg-[#191a1f] ${
+                index === 0 ? "md:col-span-2" : ""
+              }`}
             >
               {/* PROJECT PREVIEW */}
               <div
-                className={`relative flex items-center justify-center overflow-hidden p-5 sm:p-8 ${project.style === "routex"
-                  ? "bg-[#181d26]"
-                  : project.style === "clothing"
+                className={`relative flex items-center justify-center overflow-hidden p-5 sm:p-8 ${
+                  project.style === "routex"
+                    ? "bg-[#181d26]"
+                    : project.style === "clothing"
                     ? "bg-[#252321]"
                     : "bg-[#1f232b]"
-                  }`}
+                }`}
               >
                 <div
-                  className={`w-full overflow-hidden rounded-xl border border-white/10 shadow-2xl transition duration-500 group-hover:-translate-y-1 ${index === 0 ? "max-w-5xl" : "max-w-xl"
-                    }`}
+                  className={`w-full overflow-hidden rounded-xl border border-white/10 shadow-2xl transition duration-500 group-hover:-translate-y-1 ${
+                    index === 0 ? "max-w-5xl" : "max-w-xl"
+                  }`}
                 >
                   <img
                     src={project.image}
@@ -394,7 +310,7 @@ export default function Home() {
                 </div>
 
                 <span className="absolute right-7 top-7 rounded-full bg-black/75 px-4 py-2 text-xs text-white backdrop-blur-md border border-white/10">
-                  Project showcase ↗
+                  Project showcase
                 </span>
               </div>
 
@@ -436,7 +352,6 @@ export default function Home() {
                     className="inline-flex items-center gap-2 rounded-full bg-amber-400 px-5 py-3 text-sm font-semibold text-black transition hover:-translate-y-0.5 hover:bg-amber-300"
                   >
                     {project.exploreText}
-                    <span aria-hidden="true">↗</span>
                   </a>
                 </div>
               </div>
@@ -461,7 +376,7 @@ export default function Home() {
           </p>
 
           <h2 className="max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
-            Digital tools for real business needs.
+            What we build and run.
           </h2>
 
           <p className="mt-5 max-w-2xl leading-7 text-zinc-400">
@@ -469,29 +384,31 @@ export default function Home() {
             practical, well-designed digital solutions.
           </p>
 
-          <div className="mt-14 grid gap-4 sm:grid-cols-2">
+          <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {services.map((service) => (
               <article
                 key={service.number}
-                className="rounded-2xl border border-white/10 bg-white/[0.025] p-7 transition hover:border-amber-300/40 hover:bg-white/[0.04] sm:p-9"
+                className="flex flex-col justify-between rounded-2xl border border-white/10 bg-white/[0.025] p-7 transition hover:border-amber-300/40 hover:bg-white/[0.04]"
               >
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-zinc-500">
-                    {service.number}
-                  </span>
+                <div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-mono text-zinc-500">
+                      {service.number}
+                    </span>
 
-                  <span className="text-3xl text-amber-300">
-                    {service.icon}
-                  </span>
+                    <span className="text-2xl text-amber-300">
+                      {service.icon}
+                    </span>
+                  </div>
+
+                  <h3 className="mt-6 text-xl font-semibold text-white">
+                    {service.title}
+                  </h3>
+
+                  <p className="mt-3 text-sm leading-relaxed text-zinc-400">
+                    {service.description}
+                  </p>
                 </div>
-
-                <h3 className="mt-8 text-2xl font-semibold">
-                  {service.title}
-                </h3>
-
-                <p className="mt-4 leading-7 text-zinc-400">
-                  {service.description}
-                </p>
               </article>
             ))}
           </div>
@@ -623,14 +540,14 @@ export default function Home() {
               rel="noreferrer"
               className="rounded-full bg-[#171717] px-7 py-4 font-semibold text-white transition hover:bg-black/80"
             >
-              Chat on WhatsApp ↗
+              Chat on WhatsApp
             </a>
 
             <a
               href={`mailto:${BRAND.email}`}
               className="rounded-full border border-black/25 px-7 py-4 font-semibold transition hover:bg-black/5"
             >
-              Send us an email ↗
+              Send us an email
             </a>
           </div>
         </div>
@@ -654,7 +571,7 @@ export default function Home() {
             href="#home"
             className="transition hover:text-amber-300"
           >
-            Back to top ↑
+            Back to top
           </a>
         </div>
       </footer>
