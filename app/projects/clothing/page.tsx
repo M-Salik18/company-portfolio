@@ -44,12 +44,12 @@ export default function ClothingProjectPage() {
                     <a href="/" className="flex items-center gap-3">
                         <img
                             src="/Images/logo.jpeg"
-                            alt="XYRON Logo"
+                            alt="Xyron Logo"
                             className="h-10 w-10 rounded-xl object-contain"
                         />
 
                         <span className="text-lg font-bold tracking-[0.15em]">
-                            XYRON
+                            Xyron
                         </span>
                     </a>
 
@@ -268,7 +268,7 @@ export default function ClothingProjectPage() {
                     <div className="pointer-events-none absolute -right-20 -top-24 h-80 w-80 rounded-full border-[45px] border-black/5" />
 
                     <p className="text-sm font-bold uppercase tracking-[0.2em]">
-                        XYRON / Selected work
+                        Xyron / Selected work
                     </p>
 
                     <h2 className="relative mt-5 max-w-3xl text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
@@ -304,11 +304,11 @@ export default function ClothingProjectPage() {
                         href="/"
                         className="font-bold tracking-widest text-white"
                     >
-                        XYRON
+                        Xyron
                     </a>
 
                     <p>
-                        © {new Date().getFullYear()} XYRON. Built with care.
+                        © {new Date().getFullYear()} Xyron. Built with care.
                     </p>
 
                     <a
