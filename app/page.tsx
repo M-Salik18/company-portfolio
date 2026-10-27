@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 const BRAND = {
-  name: "Xyron",
+  name: "XYRON",
   email: "xyron.comp@gmail.com",
   whatsapp: "94781942757", // Replace with your WhatsApp number in international format
 };
@@ -283,24 +283,21 @@ export default function Home() {
           {projects.map((project, index) => (
             <article
               key={project.number}
-              className={`group overflow-hidden rounded-3xl border border-white/10 bg-[#191a1f] ${
-                index === 0 ? "md:col-span-2" : ""
-              }`}
+              className={`group overflow-hidden rounded-3xl border border-white/10 bg-[#191a1f] ${index === 0 ? "md:col-span-2" : ""
+                }`}
             >
               {/* PROJECT PREVIEW */}
               <div
-                className={`relative flex items-center justify-center overflow-hidden p-5 sm:p-8 ${
-                  project.style === "routex"
+                className={`relative flex items-center justify-center overflow-hidden p-5 sm:p-8 ${project.style === "routex"
                     ? "bg-[#181d26]"
                     : project.style === "clothing"
-                    ? "bg-[#252321]"
-                    : "bg-[#1f232b]"
-                }`}
+                      ? "bg-[#252321]"
+                      : "bg-[#1f232b]"
+                  }`}
               >
                 <div
-                  className={`w-full overflow-hidden rounded-xl border border-white/10 shadow-2xl transition duration-500 group-hover:-translate-y-1 ${
-                    index === 0 ? "max-w-5xl" : "max-w-xl"
-                  }`}
+                  className={`w-full overflow-hidden rounded-xl border border-white/10 shadow-2xl transition duration-500 group-hover:-translate-y-1 ${index === 0 ? "max-w-5xl" : "max-w-xl"
+                    }`}
                 >
                   <img
                     src={project.image}
