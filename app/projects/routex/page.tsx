@@ -36,38 +36,40 @@ const features = [
 
 export default function RouteXPage() {
     return (
-        <main className="min-h-screen bg-[#101114] text-white pt-20">
+        <main className="min-h-screen text-white pt-24">
             {/* NAVIGATION */}
-            <header className="fixed top-0 left-0 right-0 z-50 w-full border-b border-white/10 bg-[#101114]/90 backdrop-blur-xl">
-                <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 md:px-10">
-                    <a href="/" className="flex items-center gap-3">
-                        <img
-                            src="/Images/logo.jpeg"
-                            alt="Xyron Logo"
-                            className="h-10 w-10 rounded-xl object-contain"
-                        />
+            <header className="fixed top-0 left-0 right-0 z-50 w-full glass-nav">
+                <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-10">
+                    <a href="/" className="flex items-center gap-3 group">
+                        <div className="flex items-center justify-center overflow-hidden rounded-xl border border-white/20 bg-white/5 p-1 backdrop-blur-md transition-all duration-300 group-hover:border-amber-400/50 group-hover:shadow-[0_0_20px_-3px_rgba(251,191,36,0.3)]">
+                            <img
+                                src="/Images/logo.jpeg"
+                                alt="XYRON Logo"
+                                className="h-8 w-8 rounded-lg object-contain"
+                            />
+                        </div>
 
-                        <span className="text-lg font-bold tracking-[0.15em]">
-                            Xyron
+                        <span className="text-lg font-bold tracking-[0.18em] text-white transition group-hover:text-amber-300">
+                            XYRON
                         </span>
                     </a>
 
                     <a
                         href="/#products"
-                        className="rounded-full border border-white/15 px-5 py-3 text-sm font-medium transition hover:border-amber-300 hover:text-amber-300"
+                        className="glass-pill sheen-overlay rounded-full px-5 py-2.5 text-sm font-medium transition hover:border-amber-300/40 hover:text-amber-300"
                     >
-                        All products
+                        ← All products
                     </a>
                 </nav>
             </header>
 
             {/* HERO */}
-            <section className="relative overflow-hidden border-b border-white/10">
-                <div className="pointer-events-none absolute -right-40 -top-40 h-[500px] w-[500px] rounded-full bg-amber-400/10 blur-[140px]" />
+            <section className="relative overflow-hidden">
+                <div className="pointer-events-none absolute -right-32 -top-32 h-[500px] w-[500px] rounded-full bg-gradient-to-bl from-amber-400/20 via-sky-500/10 to-transparent blur-[140px] animate-pulse-glow" />
 
-                <div className="relative mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-32">
-                    <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.25em] text-amber-300">
-                        <span className="h-px w-8 bg-amber-300" />
+                <div className="relative mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-24">
+                    <div className="inline-flex items-center gap-2 glass-pill-amber rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.25em] text-amber-300">
+                        <span className="h-1.5 w-1.5 rounded-full bg-amber-300 animate-ping" />
                         Project case study
                     </div>
 
@@ -75,7 +77,7 @@ export default function RouteXPage() {
                         <div>
                             <h1 className="text-5xl font-semibold tracking-tight sm:text-7xl">
                                 RouteX
-                                <span className="text-amber-300">.</span>
+                                <span className="text-amber-300 drop-shadow-[0_0_20px_rgba(251,191,36,0.4)]">.</span>
                             </h1>
 
                             <p className="mt-6 max-w-2xl text-xl leading-9 text-zinc-300">
@@ -85,18 +87,18 @@ export default function RouteXPage() {
                             </p>
                         </div>
 
-                        <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-                            <p className="text-xs uppercase tracking-widest text-zinc-500">
+                        <div className="glass-panel p-6 rounded-2xl shadow-xl">
+                            <p className="text-xs uppercase tracking-widest text-amber-300/70">
                                 Project type
                             </p>
 
-                            <p className="mt-2 text-lg font-semibold">
+                            <p className="mt-2 text-lg font-semibold text-white">
                                 Logistics Management System
                             </p>
 
                             <div className="my-5 border-t border-white/10" />
 
-                            <p className="text-xs uppercase tracking-widest text-zinc-500">
+                            <p className="text-xs uppercase tracking-widest text-amber-300/70">
                                 Project focus
                             </p>
 
@@ -106,17 +108,17 @@ export default function RouteXPage() {
                         </div>
                     </div>
 
-                    {/* HERO IMAGE - LOGIN PAGE ONLY */}
-                    <div className="mt-14 overflow-hidden rounded-3xl border border-white/10 bg-[#1a1c22] p-2 shadow-2xl sm:p-4">
+                    {/* HERO IMAGE */}
+                    <div className="mt-14 overflow-hidden rounded-3xl glass-card sheen-overlay p-3 sm:p-5 shadow-2xl">
                         <img
                             src="/Images/RouteX/login.png"
                             alt="RouteX Login Portal"
-                            className="h-auto w-full rounded-2xl"
+                            className="h-auto w-full rounded-2xl object-cover"
                             fetchPriority="high"
                         />
                     </div>
 
-                    <p className="mt-4 text-sm text-zinc-500">
+                    <p className="mt-4 text-sm text-zinc-400">
                         RouteX login portal — secure logistics management gateway
                     </p>
                 </div>
@@ -124,76 +126,78 @@ export default function RouteXPage() {
 
             {/* PROJECT OVERVIEW */}
             <section className="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28">
-                <div className="grid gap-12 md:grid-cols-2">
-                    <div>
-                        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">
-                            01 / Overview
-                        </p>
+                <div className="glass-panel rounded-3xl p-8 sm:p-12 md:p-16">
+                    <div className="grid gap-12 md:grid-cols-2 md:items-center">
+                        <div>
+                            <div className="inline-flex items-center gap-2 glass-pill-amber rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-amber-300">
+                                01 / Overview
+                            </div>
 
-                        <h2 className="mt-5 text-4xl font-semibold tracking-tight sm:text-5xl">
-                            Bringing logistics operations together.
-                        </h2>
-                    </div>
+                            <h2 className="mt-5 text-4xl font-semibold tracking-tight sm:text-5xl">
+                                Bringing logistics operations together.
+                            </h2>
+                        </div>
 
-                    <div>
-                        <p className="text-lg leading-8 text-zinc-300">
-                            RouteX is a logistics platform designed to bring important
-                            delivery and business operations into a connected system. It
-                            combines desktop management, vehicle routing, and
-                            intelligent features to support logistics workflows.
-                        </p>
+                        <div>
+                            <p className="text-lg leading-8 text-zinc-300">
+                                RouteX is a logistics platform designed to bring important
+                                delivery and business operations into a connected system. It
+                                combines desktop management, vehicle routing, and
+                                intelligent features to support logistics workflows.
+                            </p>
 
-                        <p className="mt-5 leading-7 text-zinc-400">
-                            The platform includes tools for managing orders, planning
-                            routes, monitoring vehicles, handling inventory, and reviewing
-                            forecasts.
-                        </p>
+                            <p className="mt-5 leading-7 text-zinc-400">
+                                The platform includes tools for managing orders, planning
+                                routes, monitoring vehicles, handling inventory, and reviewing
+                                forecasts.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
 
             {/* FEATURES */}
-            <section className="border-y border-white/10 bg-[#17181d]">
-                <div className="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28">
-                    <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">
+            <section className="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28">
+                <div className="mb-12">
+                    <div className="inline-flex items-center gap-2 glass-pill-amber rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-amber-300">
                         02 / Core capabilities
-                    </p>
+                    </div>
 
                     <h2 className="mt-5 max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
                         Designed around real workflows.
                     </h2>
+                </div>
 
-                    <div className="mt-12 grid gap-4 sm:grid-cols-2">
-                        {features.map((feature) => (
-                            <article
-                                key={feature.number}
-                                className="rounded-2xl border border-white/10 bg-white/[0.025] p-7 transition hover:border-amber-300/40 sm:p-9"
-                            >
-                                <span className="text-sm text-amber-300">
-                                    {feature.number}
-                                </span>
+                <div className="grid gap-5 sm:grid-cols-2">
+                    {features.map((feature) => (
+                        <article
+                            key={feature.number}
+                            className="glass-card sheen-overlay rounded-2xl p-7 transition hover:-translate-y-1 sm:p-9"
+                        >
+                            <span className="glass-pill-amber inline-block rounded-lg px-3 py-1 font-mono text-xs font-bold text-amber-300">
+                                {feature.number}
+                            </span>
 
-                                <h3 className="mt-6 text-2xl font-semibold">
-                                    {feature.title}
-                                </h3>
+                            <h3 className="mt-6 text-2xl font-semibold text-white">
+                                {feature.title}
+                            </h3>
 
-                                <p className="mt-4 leading-7 text-zinc-400">
-                                    {feature.description}
-                                </p>
-                            </article>
-                        ))}
-                    </div>
+                            <p className="mt-4 leading-7 text-zinc-400">
+                                {feature.description}
+                            </p>
+                        </article>
+                    ))}
                 </div>
             </section>
 
             {/* TECHNOLOGY */}
-            <section className="border-b border-white/10 bg-[#17181d]">
-                <div className="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28">
+            <section className="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28">
+                <div className="glass-panel rounded-3xl p-8 sm:p-12 md:p-16">
                     <div className="grid gap-10 md:grid-cols-2 md:items-center">
                         <div>
-                            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">
+                            <div className="inline-flex items-center gap-2 glass-pill-amber rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-amber-300">
                                 03 / Technology
-                            </p>
+                            </div>
 
                             <h2 className="mt-5 text-4xl font-semibold tracking-tight sm:text-5xl">
                                 Built with modern tools.
@@ -209,7 +213,7 @@ export default function RouteXPage() {
                             {technologies.map((technology) => (
                                 <span
                                     key={technology}
-                                    className="rounded-full border border-white/10 bg-white/[0.03] px-5 py-3 text-sm text-zinc-300"
+                                    className="glass-pill rounded-full px-5 py-3 text-sm text-zinc-200"
                                 >
                                     {technology}
                                 </span>
@@ -221,11 +225,11 @@ export default function RouteXPage() {
 
             {/* PROJECT SUMMARY */}
             <section className="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28">
-                <div className="grid gap-12 md:grid-cols-2">
+                <div className="grid gap-12 md:grid-cols-2 md:items-center">
                     <div>
-                        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">
+                        <div className="inline-flex items-center gap-2 glass-pill-amber rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-amber-300">
                             04 / Project summary
-                        </p>
+                        </div>
 
                         <h2 className="mt-5 text-4xl font-semibold tracking-tight sm:text-5xl">
                             One connected logistics experience.
@@ -254,7 +258,7 @@ export default function RouteXPage() {
                             ].map((item) => (
                                 <span
                                     key={item}
-                                    className="rounded-full border border-white/10 px-4 py-2 text-sm text-zinc-300"
+                                    className="glass-pill rounded-full px-4 py-2 text-sm text-zinc-300"
                                 >
                                     {item}
                                 </span>
@@ -266,59 +270,61 @@ export default function RouteXPage() {
 
             {/* BACK TO PROJECTS / CTA */}
             <section className="mx-auto max-w-7xl px-5 py-20 md:px-10 md:py-28">
-                <div className="relative overflow-hidden rounded-[2rem] bg-amber-300 p-8 text-[#171717] sm:p-14 md:p-16">
-                    <div className="pointer-events-none absolute -right-20 -top-24 h-80 w-80 rounded-full border-[45px] border-black/5" />
+                <div className="glass-card-amber relative overflow-hidden rounded-[2.5rem] p-8 sm:p-14 md:p-16 text-white shadow-2xl">
+                    <div className="pointer-events-none absolute -right-20 -top-24 h-96 w-96 rounded-full bg-amber-400/25 blur-[100px] animate-pulse-glow" />
 
-                    <p className="text-sm font-bold uppercase tracking-[0.2em]">
-                        Xyron / Selected work
-                    </p>
+                    <div className="relative z-10">
+                        <div className="inline-flex items-center gap-2 rounded-full border border-amber-300/30 bg-amber-400/20 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-amber-200 backdrop-blur-md">
+                            XYRON / Selected work
+                        </div>
 
-                    <h2 className="relative mt-5 max-w-3xl text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
-                        Have a project in mind?
-                    </h2>
+                        <h2 className="relative mt-6 max-w-3xl text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
+                            Have a project in mind?
+                        </h2>
 
-                    <p className="relative mt-5 max-w-xl leading-7 text-black/70">
-                        Let&apos;s discuss how we can help bring your next digital
-                        project to life.
-                    </p>
+                        <p className="relative mt-5 max-w-xl text-lg leading-8 text-zinc-300">
+                            Let&apos;s discuss how we can help bring your next digital
+                            project to life.
+                        </p>
 
-                    <div className="relative mt-8 flex flex-wrap gap-4">
-                        <a
-                            href="/#contact"
-                            className="rounded-full bg-[#171717] px-7 py-4 font-semibold text-white transition hover:bg-black/80"
-                        >
-                            Start a project
-                        </a>
+                        <div className="relative mt-8 flex flex-wrap gap-4">
+                            <a
+                                href="/#contact"
+                                className="sheen-overlay relative overflow-hidden rounded-full bg-amber-400 px-8 py-4 font-semibold text-black shadow-[0_0_30px_-5px_rgba(245,158,11,0.6)] transition duration-300 hover:-translate-y-1 hover:bg-amber-300"
+                            >
+                                Start a project
+                            </a>
 
-                        <a
-                            href="/#products"
-                            className="rounded-full border border-black/25 px-7 py-4 font-semibold transition hover:bg-black/5"
-                        >
-                            Back to all products
-                        </a>
+                            <a
+                                href="/#products"
+                                className="glass-card sheen-overlay rounded-full px-8 py-4 font-semibold text-white border border-white/20 transition duration-300 hover:-translate-y-1 hover:border-amber-300 hover:text-amber-300"
+                            >
+                                Back to all products
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
 
             {/* FOOTER */}
-            <footer className="border-t border-white/10">
-                <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-8 text-sm text-zinc-500 sm:flex-row sm:items-center sm:justify-between md:px-10">
+            <footer className="glass-panel mx-auto max-w-7xl mb-8 rounded-2xl border border-white/10 px-6 py-8">
+                <div className="flex flex-col gap-4 text-sm text-zinc-400 sm:flex-row sm:items-center sm:justify-between md:px-4">
                     <a
                         href="/"
-                        className="font-bold tracking-widest text-white"
+                        className="font-bold tracking-[0.2em] text-white transition hover:text-amber-300"
                     >
-                        Xyron
+                        XYRON
                     </a>
 
                     <p>
-                        © {new Date().getFullYear()} Xyron. Built with care.
+                        © {new Date().getFullYear()} XYRON. Built with care.
                     </p>
 
                     <a
-                        href="/#home"
+                        href="#"
                         className="transition hover:text-amber-300"
                     >
-                        Back to top
+                        Back to top ↑
                     </a>
                 </div>
             </footer>
